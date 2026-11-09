@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillPilots - Note Form Validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">SKILLPILOTS PRACTICE PROJECT</p>
+      <h1>Notes</h1>
+      <p class="muted">Add a note. Both fields are required.</p>
+    </header>
+
+    <form id="note-form" novalidate>
+      <label for="title">Note title</label>
+      <input id="title" name="title" type="text" placeholder="Enter a title">
+      <small class="error" id="title-error" aria-live="polite"></small>
+
+      <label for="content">Note content</label>
+      <textarea id="content" name="content" rows="6" placeholder="Write your note"></textarea>
+      <small class="error" id="content-error" aria-live="polite"></small>
+
+      <p class="error form-error" id="form-error" role="alert"></p>
+      <button type="submit">Add note</button>
+      <p class="success" id="success-message" role="status"></p>
+    </form>
+
+    <section class="notes-section">
+      <h2>Added notes</h2>
+      <div id="notes-list" class="notes-list">
+        <p class="muted empty">Your notes will appear here.</p>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
